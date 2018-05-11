@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <%- include('common/head') %>
+    <script src="/controllers/manage.js"></script>
+  </head>
+  <body class="fixed-nav sticky-footer bg-dark" id="page-top" >
+    <%- include('common/nav-bar') %>
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-table"></i> <%= title %></div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <div id="addPart" style="padding-right:2px;padding-bottom: 20px;">
+                <form class="form-inline">
+                  <div class="form-group">
+                    <label for="name" class="text-primary">name :</label>
+                    <input class="form-control" type="text" id="name"></input>
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd" class="text-primary">email :</label>
+                    <input class="form-control" type="email" id="email"></input>
+                  </div>
+                  <div class="form-group">
+                    <label for="distance" class="text-primary">password :</label>
+                    <div id="partPassword"></div>
+                  </div>
+                  <div class="form-group" id="partAuthority">
+                    <!-- <label for="time" class="text-primary">authority :</label> -->
+                    <!-- <select class="form-control" type="text" id="addTime"></input> -->
+                  </div>
+                  <button class="btn btn-success" style="align: right;" id="save">Save</button>
+                </form>
+              </div>
+
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr style="background-color: lightgray;">
+                    <th>Name</th>
+                    <th>email</th>
+                    <th>password</th>
+                    <th>authority</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr style="background-color: lightgray;">
+                    <th>Name</th>
+                    <th>email</th>
+                    <th>password</th>
+                    <th>authority</th>
+                  </tr>
+                </tfoot>
+                <tbody id="list">
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div><p class="text-success text-center" id="resultMsg"></p></div>
+          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
